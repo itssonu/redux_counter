@@ -4,11 +4,6 @@ import {Provider} from 'react-redux';
 import store from './redux/store/index';
 
 function App() {
-  
-store.subscribe(() => console.log(store.getState().counterReducer))
-
-store.dispatch({ type: 'INCREMENT' })
-
   return (
     <Provider store={store}>
     <Counter/>
