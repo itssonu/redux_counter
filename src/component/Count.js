@@ -1,9 +1,15 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-function Count() {
+function Count(props) {
   return (
-    <h1 id="counter">20</h1>
+    <h1 id="counter">{props.count}</h1>
   )
 }
 
-export default Count
+function mapStateToProps(state) {
+    const { count } = state.counterReducer
+    return { count }
+  }
+  
+export default connect(mapStateToProps)(Count)

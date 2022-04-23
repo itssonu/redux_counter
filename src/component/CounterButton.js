@@ -1,4 +1,4 @@
 const CounterButton = (props)=>{
-    return  (<button id={props.id}>{props.children}</button>);
+    return  (<button onClick={props.onClick} id={props.id}>{props.children}</button>);
 }
 export default CounterButton;
